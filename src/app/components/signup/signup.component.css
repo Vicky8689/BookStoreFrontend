@@ -1,0 +1,26 @@
+.loginbtn{
+    padding-top: 5px;
+   /* border: 2PX SOLID rgb(248, 66, 10);  */
+
+    display: flex;
+    justify-content: center;
+}
+.loginbtn button{
+    height: 30px;
+ width: 100%;
+ background-color: rgb(223, 42, 42);
+
+
+}
+.mat-mdc-form-field{
+    display: flex;
+    /* margin-left: -33px; */
+    width: 100%;
+   /* border: 2PX SOLID rgb(248, 66, 10) !important;  */
+ 
+}
+.outdiv{
+   padding-top: 5px;
+    /* border: 2PX SOLID rgb(85, 248, 10);  */
+ overflow: hidden;
+ }

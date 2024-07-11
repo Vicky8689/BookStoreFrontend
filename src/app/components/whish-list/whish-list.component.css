@@ -1,0 +1,46 @@
+.main{
+    border:1PX solid rgb(212, 208, 208);
+    
+}
+.whishhead{
+    display: flex;
+   align-items: center;
+   padding-left: 2px;
+    background-color: rgb(230, 230, 230);
+    border:1PX solid rgb(212, 208, 208);
+    height: 30px;
+
+}
+.content{
+    border:1PX solid rgb(212, 208, 208);
+    display: flex;
+  justify-content: space-between;
+    margin:10px;
+}
+.bookImage{
+    height: 100px;
+    width: 80px;
+}
+.bookimgdiv{
+
+    padding: 20px;
+}
+.price{
+    display: flex;
+    gap: 5px;
+}
+h4{
+    margin: 0px;
+   
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    
+}
+.delete {
+    /* border:2PX solid rgb(218, 27, 27); */
+    padding: 20px;
+
+}

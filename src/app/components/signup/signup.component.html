@@ -1,0 +1,47 @@
+<form [formGroup]="signupForm" (ngSubmit)="signupuser()" >    
+    <div class="outdiv">
+          
+          <div class="inpitdata">
+            <div>
+
+                <mat-form-field  appearance="outline">
+                    <input type="text" matInput  placeholder="Full Name" formControlName="name">
+                    <mat-label>Full Name</mat-label>
+                     </mat-form-field>
+            </div>
+            <div>
+
+                <mat-form-field  appearance="outline">
+                    <input type="email" matInput  placeholder="  Email or phone" formControlName="email">
+                    <mat-label>Email</mat-label>
+                     </mat-form-field>
+            </div>
+            <div>
+
+                <mat-form-field  appearance="outline">
+                    <input type="password" matInput  placeholder="  Password" formControlName="pass">
+                    <mat-label>Password</mat-label>
+                    <!-- <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['required']">email is required</div> -->
+                    <!-- <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['email']">Email should be valid</div>  -->
+                </mat-form-field>
+            </div>
+            <div>
+
+                <mat-form-field  appearance="outline">
+                    <input type="text" matInput  placeholder="Phone Number" formControlName="mobile">
+                    <mat-label>Mobile Number</mat-label>
+                    </mat-form-field>
+            </div>
+            
+          </div>
+          
+          <div class="loginbtn">
+            <button mat-raised-button color="primary" type="submit">Signup</button>             
+          </div>
+         
+
+          
+          
+          
+    </div>
+</form>

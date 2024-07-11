@@ -1,0 +1,72 @@
+.main{
+    width: 70%;
+    
+    
+}
+.myCart{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 20px;
+    border:2PX solid rgb(160, 156, 156);
+    margin-bottom: 10px;
+}
+
+.bookImage{
+    /* border:2PX solid rgb(46, 197, 16); */
+   padding: 20px;
+    height: 150px;
+}
+.bookdtl{
+    display: flex;
+     gap: 30px;
+}
+.cartbutton{
+    display: flex;
+    gap: 5px;
+}
+.cartbutton button{
+    border-radius: 100%;
+    border: #F5F5F5;
+  }
+
+.cartbutton  input {
+    width: 30px;
+    
+   overflow: visible;
+    text-align: center;
+  }
+  .sub{
+    
+    display: flex;
+    
+    justify-content: flex-end;
+  }
+
+  .sub button{
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 35px;
+    background-color:  #3371B5;
+   border-radius: 5px;
+  }
+
+  .price{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+  }
+  .price h4{
+    text-decoration: none;
+    margin: 0px;
+  }
+  .price p{
+ text-decoration: none;
+ font-size: 13px;
+ margin: 0px;
+  }

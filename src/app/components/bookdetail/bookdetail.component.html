@@ -1,0 +1,80 @@
+<div class="main">
+
+    <div class="left">
+
+
+        <mat-card class="bookcard">
+            <div>
+                <div class="bookimgdiv">
+                    <img class="bookImage" src="../../../assets/tempImage.png" alt="">
+                </div>
+
+
+
+            </div>
+        </mat-card>
+        <div class="bottom">
+                <button *ngIf="cartbtnshow" (click)="onClickshowcart()">Add to bag</button>
+                <div *ngIf="!cartbtnshow" class="cartitem">
+                    <button>
+
+                        <mat-icon (click)="decreaseQuantity()">remove</mat-icon>
+                    </button>
+
+                    <input type="number" [(ngModel)]="quantity">
+
+                    <button>
+                        <mat-icon (click)="increaseQuantity()">add</mat-icon>
+
+                    </button>
+                </div>
+                <button class="favbtn" (click)="AddwhishList(mydata.bookId)"><mat-icon (click)="RemovewhishList()">favorite</mat-icon> <p>whishlist</p></button>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="datils">
+            <h4>{{mydata.bookName}}</h4>
+
+
+            <p>{{mydata.author}}</p>
+
+            <div style="display: flex;">
+
+                <button>4.5 <mat-icon>star</mat-icon></button>
+                <h5>(20)</h5>
+            </div>
+
+               
+            <h5>Rs. {{mydata.price}} Rs.{{mydata.discountPrice}}</h5>
+         
+        </div>
+        <hr>
+        <div class="desc">
+            <H4>&#8226; Book Detail</H4>
+            <p style="padding: 5px;">
+               {{mydata.description}} 
+            </p>
+            <hr>
+        </div>
+
+        <div class="feedback">
+            <h4>Custum feedback</h4>
+            <div class="feed">
+                <h5>allrating</h5>
+                <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+                <div class="feedinput">
+                    <textarea  type="text">feedback</textarea>
+                </div>
+                <div>
+
+                    <button type="submit">submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

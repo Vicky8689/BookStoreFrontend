@@ -1,0 +1,80 @@
+<mat-toolbar class="mynavbar">
+    <div class="logo"><img src="../../../assets/education.png" alt="">Book Store</div>
+    <div class="search">
+        <mat-icon matPrefix>search</mat-icon>
+        <input class="searchinput" matInput placeholder="Type to search...">
+
+    </div>
+
+    <div class="rightnav">
+        <div class="navprofile">
+            
+            <button mat-button [matMenuTriggerFor]="profileMenu">
+                <mat-icon>
+                    person
+                </mat-icon>
+            </button>
+            
+            <mat-menu #profileMenu="matMenu">
+                <div class="profilestatus" *ngIf="tokenStatus">
+                    <h5>Hello vicky</h5>
+                    <p>
+                        <mat-icon>account_circle</mat-icon>
+                        
+                        Profile
+                    </p>
+                    <p>
+                        <mat-icon>shopping_cart</mat-icon> My Orders
+                    </p>
+                    <p (click)="OnClickGetWhishlist()">
+                        <mat-icon>favorite</mat-icon> My Wishlist
+                    </p>
+                    <button (click)="onClickLogOut()">LOGOUT</button>
+                     
+                </div>
+                <div class="profilestatus" *ngIf="!tokenStatus">
+                    <h5>Welcome</h5>
+                    <p>To acsees account amd manage orders</p>
+                    <button (click)="onClickLogin()">LOGIN/SIGNUP</button>
+                     <hr>
+                     <p>
+                        <mat-icon>shopping_cart</mat-icon> My Orders
+                     </p>
+                     <p><mat-icon>favorite</mat-icon> whishlist</p>
+                    
+                    
+                    
+                 </div>
+            </mat-menu>
+        </div>
+        <div class="navcart">
+            <button class="cartbtn" >
+
+                <mat-icon (click)="OnClickCart()">
+                    shopping_cart
+                </mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-toolbar>
+<div class="maindiv">
+
+    <div class="content">
+
+       
+        <div class="books">
+            <router-outlet>
+
+            </router-outlet>
+
+        </div>
+
+    </div>
+
+
+    <mat-toolbar color="primary" class="footer">
+        <span>Copyright © 2020, Bookstore Private Limited. All Rights Reserved</span>
+    </mat-toolbar>
+
+
+</div>

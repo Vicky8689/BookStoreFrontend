@@ -1,0 +1,194 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    /* border:2PX solid rgb(104, 197, 16); */
+    height: 83vh;
+}
+.left{
+ display: flex;
+ flex-direction: column;
+ /* flex-wrap: wrap; */
+ /* justify-content: center;    */
+ align-items: center;
+    /* border:2PX solid rgb(247, 74, 5); */
+width: 40%;
+}
+.right{
+width: 56%;
+    /* border:2PX solid rgb(16, 19, 197); */
+    
+}
+
+.bookimgdiv{
+    /* border:2PX solid rgb(104, 197, 16); */
+background-color:  #F5F5F5;
+    /* height: 56%; */
+    width:100%;
+}
+
+.bookcard{
+    border:2PX solid rgb(222, 224, 219);
+    /* border:2PX solid rgb(236, 100, 8); */
+width: 60%;
+    /* width: 300px; */
+  margin: 10px;
+  
+}
+
+.bookImage{
+    background-size: cover;
+    height: 330px;
+    width: 200px;
+    padding-inline: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bottom{
+    /* border:2PX solid rgb(104, 197, 16); */
+width: 64%;
+
+    display: flex;
+    justify-content: space-around;
+}
+.bottom button{
+
+    height: 30px;
+    width: 45%;
+}
+.favbtn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-color: rgb(116, 112, 112);
+    border-radius: 5px;
+}
+.favbtn mat-icon{
+    color: #F5F5F5;
+}
+
+
+.datils{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5px;
+    gap: 5px;
+/* box-shadow: 0px 1px 0px rgb(206, 205, 203); */
+
+}
+.datils h4{
+    margin: 1px;
+}
+.datils h5{
+    margin: 1px;
+}
+.datils p{
+    margin: 0px;
+    
+}
+.datils button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+
+    background-color: green;
+    border: none;
+    width: 60PX;
+    font-size: large;
+    border-radius: 20px;
+}
+.datils button mat-icon{
+    color:white;
+    /* height: 30px; */
+   
+}
+
+
+.desc{
+    margin: 5PX;
+/* box-shadow: 0px 1px 0px rgb(206, 205, 203); */
+
+}
+.feed{
+    background-color: aliceblue;
+}
+
+.cartitem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .cartitem button{
+    border-radius: 100%;
+    border: #F5F5F5;
+  }
+.cartitem  input {
+    width: 30px;
+   overflow: visible;
+    text-align: center;
+  }
+  .feedinput {
+    /* border:2PX solid rgb(104, 197, 16); */
+
+    /* height: 10px; */
+  }
+  .feedinput textarea{
+    height: 70px;
+    width:80% ;
+  }
+  
+@media only screen and (max-width: 600px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+        /* border:2PX solid rgb(104, 197, 16); */
+        
+    }
+    .left{
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        /* justify-content: center;    */
+       
+       width: 100%;
+       }
+       .right{
+       width: 100%;
+           /* border:2PX solid rgb(16, 19, 197); */
+           
+       }
+       .bookImage{
+        height:290px;
+        width: 180px;
+        
+        padding-inline: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .bookcard{
+        /* border:2PX solid rgb(222, 224, 219); */
+        /* border:2PX solid rgb(236, 100, 8); */
+    width: 65%;
+    display: flex;
+    /* align-items: center; */
+        /* width: 300px; */
+      margin: 10px;
+      
+    }
+    .bookimgdiv{
+        /* border:2PX solid rgb(16, 43, 197); */
+    background-color:  #F5F5F5;
+        /* height: 56%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+}

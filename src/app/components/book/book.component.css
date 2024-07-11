@@ -1,0 +1,111 @@
+
+.mainreturnAgain{
+    display: flex;
+    flex-direction: column;
+}
+.mainreturns{
+    /* border:2PX solid rgb(182, 16, 197); */
+    /* width: fit-content; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 40px;
+}
+.main{
+    /* border:2PX solid rgb(104, 197, 16); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin: 20px; */
+    height: 10%;
+    /* gap: 10PX; */
+}
+.topmain{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    max-width: 95%;
+    /* border:2PX solid rgb(104, 197, 16); */
+    padding: 5px;
+
+
+}
+.top{
+    /* border:2PX solid rgb(104, 197, 16); */
+    display: flex;
+    align-items: center;
+}
+
+.bookimgdiv{
+    /* border:2PX solid rgb(104, 197, 16); */
+background-color:  #F5F5F5;
+    /* height: 56%; */
+    width: 99%;
+}
+
+.bookcard{
+    border:2PX solid rgb(222, 224, 219);
+
+    /* width: 300px; */
+  margin: 10px;
+  
+}
+
+.bookImage{
+    background-size: cover;
+    height: 155px;
+    width: 150px;
+    padding-inline: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.datils{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5px;
+
+
+}
+.datils h4{
+    margin: 1px;
+}
+.datils h5{
+    margin: 1px;
+}
+.datils p{
+    margin: 0px;
+    
+}
+.datils button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    background-color: green;
+    border: none;
+    width: 60px;
+    font-size: large;
+    border-radius: 20px;
+}
+.datils button mat-icon{
+    color:white;
+   
+}
+
+@media only screen and (max-width: 600px) {
+
+
+.mainreturns{
+    /* border:2PX solid rgb(182, 16, 197); */
+    /* width: fit-content; */
+    display: flex;
+    justify-content: center;
+  
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+}

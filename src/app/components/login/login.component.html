@@ -1,0 +1,45 @@
+<form [formGroup]="loginform" (ngSubmit)="loginuser()" >    
+    <div class="outdiv">
+          
+          <div class="inpitdata">
+            <div>
+
+                <mat-form-field  appearance="outline">
+                    <input type="email" matInput  placeholder="  Email or phone*" formControlName="email">
+                    <mat-label>Email</mat-label>
+                    <!-- <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['required']">email is required</div> -->
+                    <!-- <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['email']">Email should be valid</div>  -->
+                </mat-form-field>
+            </div>
+            <div>
+
+                <mat-form-field appearance="outline">
+                    <input  type="password"  matInput placeholder="  Password*" formControlName="password">
+                    <!-- <div style="color:red;" *ngIf="submitted && f?.['password']?.errors?.['required']">Password is required</div> -->
+                    <!-- <div style="color:red;" *ngIf="submitted && f?.['password']?.errors?.['minlength']">Password should have atleast 6 characters</div> -->
+                    
+                </mat-form-field>
+                <a  class="forgot">Forgot Password</a>
+            </div>
+            
+          </div>
+          
+          <div class="loginbtn">
+            <button mat-raised-button color="primary" type="submit">Login</button>             
+          </div>
+          <div class="botom">
+            <div class="or">
+                <h3>OR</h3>
+            </div>
+            <div class="logo">
+              <button mat-raised-button color="primary" type="button">Facebook</button>         
+              <button mat-raised-button  type="button">Google</button>
+                
+            </div>
+          </div>
+
+          
+          
+          
+    </div>
+</form>

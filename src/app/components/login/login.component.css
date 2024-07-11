@@ -1,0 +1,57 @@
+.inpitdata{
+   display: flex;
+   flex-direction: column;
+   /* align-items: center; */
+   justify-content: center;
+ 
+   
+   /* border: 2PX SOLID rgb(94, 255, 0);  */
+
+    
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.forgot{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    margin-top: 0px;
+    padding: 0px;
+}
+.loginbtn{
+    padding-top: 5px;
+   /* border: 2PX SOLID rgb(248, 66, 10);  */
+
+    display: flex;
+    justify-content: center;
+}
+.loginbtn button{
+    height: 30px;
+ width: 100%;
+ background-color: rgb(223, 42, 42);
+
+
+}
+.or{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+}
+.logo button{
+    width: 100%;
+    height: 30px;
+    
+   /* border: 2PX SOLID rgb(85, 248, 10);  */
+
+}
+.outdiv{
+   /* border: 2PX SOLID rgb(85, 248, 10);  */
+overflow: hidden;
+}
