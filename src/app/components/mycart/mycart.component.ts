@@ -14,6 +14,7 @@ cartCount:any;
 quantity:any;
 customerDetail:boolean=false;
 orderSummery:boolean=false;
+
 ngOnInit(){
   this.getAllCart()
 }
@@ -29,11 +30,20 @@ getAllCart(){
   );
 }
 
+//updatae customer details
+updateCustomreDetail(customerData:any){
+  console.warn('customer data in parent ',customerData);
+  this.orderSummery=true;
+}
 
 //place order
 onClickPlaceOrder(){
   this.customerDetail=!this.customerDetail;
 
+}
+//order succes
+OrderSucces(){
+  this.router.navigate(['dashboard/orderSucces'])
 }
 
 

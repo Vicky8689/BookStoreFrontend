@@ -8,6 +8,7 @@ import { BookdetailComponent } from './components/bookdetail/bookdetail.componen
 import { LoginComponent } from './components/login/login.component';
 import { MycartComponent } from './components/mycart/mycart.component';
 import { WhishListComponent } from './components/whish-list/whish-list.component';
+import { OrderSuccesComponent } from './components/order-succes/order-succes.component';
 
 const routes: Routes = [
 
@@ -32,6 +33,9 @@ const routes: Routes = [
           },
           {
             path:'mywhishlist',component:WhishListComponent
+          },
+          {
+            path:'orderSucces',component:OrderSuccesComponent
           }
 
         ]

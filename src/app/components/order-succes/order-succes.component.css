@@ -1,0 +1,100 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    
+}
+.main div{
+    max-width: 600px;
+}
+.textdiv{
+ /* z-index: 0; */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ /* border: 2PX SOLID rgb(255, 0, 0);  */
+position: absolute;
+}
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+   /* border: 2PX SOLID rgb(94, 255, 0);  */
+  
+
+   }
+
+   .img img{
+    height: 280px;
+
+   }
+.imgdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: -1; */
+    position: relative;
+   /* border: 2PX SOLID rgb(4, 0, 255);  */
+    
+
+   }
+   .mymattbl{
+   /* border: 2PX SOLID rgb(4, 0, 255);  */
+   border: 1PX SOLID rgb(207, 209, 205); 
+
+   }
+   .mymattbl td{
+   border: 1PX SOLID rgb(207, 209, 205); 
+
+
+   }
+
+
+ .hurraytext text{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    text-align: center;
+    font-size: larger;
+    width: 400px;
+    
+    margin: 0px;
+
+} 
+td {
+  border: 1px Solid black;
+}
+th{
+   border: 1px Solid black;
+
+    text-align: center !important;
+}
+.table{
+  border: 1px Solid black;
+
+}
+.tabbtn {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   gap: 10px;
+    
+}
+.tabbtn button{
+    color:white;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       
+       height: 35px;
+       background-color:  #3371B5;
+      border-radius: 5px;
+   }
+
+
+

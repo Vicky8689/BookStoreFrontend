@@ -16,13 +16,15 @@ export class AddressdetailComponent {
     state:new FormControl('')
 
   })
+  ContinueButtonstatus:boolean=true;
   constructor(){}
 
-  @Output() updateAddressDetailEvent = new EventEmitter<any>();
+  @Output() updateCustomreDetailEvent = new EventEmitter<any>();
 
   onClickContinue(){
     
-       
+    this.updateCustomreDetailEvent.emit(this.customerDetailsFrom.value);
+  this.ContinueButtonstatus=false;
   }
 
 

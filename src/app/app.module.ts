@@ -34,6 +34,7 @@ import { BookdetailComponent } from './components/bookdetail/bookdetail.componen
 import { MycartComponent } from './components/mycart/mycart.component';
 import { AddressdetailComponent } from './components/addressdetail/addressdetail.component';
 import { WhishListComponent } from './components/whish-list/whish-list.component';
+import { OrderSuccesComponent } from './components/order-succes/order-succes.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { WhishListComponent } from './components/whish-list/whish-list.component
     BookdetailComponent,
     MycartComponent,
     AddressdetailComponent,
-    WhishListComponent
+    WhishListComponent,
+    OrderSuccesComponent
   ],
   imports: [
     MatToolbarModule,

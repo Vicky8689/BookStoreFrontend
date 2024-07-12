@@ -3,7 +3,7 @@
         <h3>Customer Details</h3>
         <button>Add Nwe Address</button>
     </div>
-    <form>
+    <form [formGroup]="customerDetailsFrom" (ngSubmit)="onClickContinue()">
     <div class="myform">
 <!-- name -->
 
@@ -11,18 +11,18 @@
 
                 <div>
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required minlength="4" />
+                    <input type="text" id="name" name="name" formControlName="fullName" required minlength="4" />
                 </div>
                 <div>
                     <label for="number">Mobile Number</label>
-                    <input type="text" id="number" name="number" required minlength="10" />
+                    <input type="text" id="number" name="number" formControlName="mobile" required minlength="10" />
                 </div>
             </div>
 <!-- address -->
             <div>
                 <div class="addressinput">
                     <label for="Add">Address</label>
-                    <input type="text" id="Add" name="Add" required />
+                    <input type="text" id="Add" name="Add" formControlName="address" required />
                 </div>
             </div>
 <!-- city -->
@@ -30,11 +30,11 @@
             <div>
                 <div>
                     <label for="city">City</label>
-                    <input type="text" id="city" name="city" required />
+                    <input type="text" id="city" name="city" formControlName="city" required />
                 </div>
                 <div>
                     <label for="state">State</label>
-                    <input type="text" id="state" name="state" required />
+                    <input type="text" id="state" name="state" formControlName="state" required />
                 </div>
             </div>
 <!-- type -->
@@ -51,7 +51,7 @@
            </div>
            
         </div>
-        <div class="subbtn">
+        <div class="subbtn" *ngIf="ContinueButtonstatus">
             <button (click)=" onClickContinue()">CONTINUE</button>
            </div>
     </form>
