@@ -7,6 +7,7 @@ import { NewUserComponent } from './components/new-user/new-user.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 
+import {MatRadioModule} from '@angular/material/radio';
 
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -58,7 +59,7 @@ import { WhishListComponent } from './components/whish-list/whish-list.component
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
-    
+    MatRadioModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,

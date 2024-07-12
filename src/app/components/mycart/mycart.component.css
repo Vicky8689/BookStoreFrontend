@@ -1,16 +1,33 @@
 .main{
-    width: 70%;
+    /* width: 70%; */
+    /* border:2PX solid rgb(160, 156, 156); */
+
     
     
 }
 .myCart{
     display: flex;
+    min-width:fit-content ;
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
     padding: 20px;
     border:2PX solid rgb(160, 156, 156);
+    /* border:2PX solid rgb(228, 9, 9); */
     margin-bottom: 10px;
+}
+.myCartAddress{
+ 
+/* width: 100%; */
+  /* min-width:fit-content ; */
+  
+  /* align-items: center; */
+  
+  /* padding: 20px; */
+  border:2PX solid rgb(160, 156, 156);
+  /* border:2PX solid rgb(228, 9, 9); */
+  margin-bottom: 10px;
+ 
 }
 
 .bookImage{

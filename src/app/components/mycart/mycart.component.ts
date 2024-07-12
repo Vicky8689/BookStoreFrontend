@@ -11,6 +11,9 @@ export class MycartComponent {
 constructor(private bookservice:BookService,private router:Router){}
 allCart:any={};
 cartCount:any;
+quantity:any;
+customerDetail:boolean=false;
+orderSummery:boolean=false;
 ngOnInit(){
   this.getAllCart()
 }
@@ -26,8 +29,12 @@ getAllCart(){
   );
 }
 
-quantity:any;
 
+//place order
+onClickPlaceOrder(){
+  this.customerDetail=!this.customerDetail;
+
+}
 
 
 decreaseQuantity(item:any) {
@@ -44,8 +51,6 @@ decreaseQuantity(item:any) {
     );
     
   }
-
-  
   
 }
 increaseQuantity(bookid:any) {

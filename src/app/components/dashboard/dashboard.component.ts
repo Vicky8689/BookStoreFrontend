@@ -19,6 +19,10 @@ ngOnInit(){
   }
   this.atDashboard=true;
 }
+moreVert:any;
+morefun(){
+
+}
 
   OnClickCart(){
     if(this.tokenStatus){
