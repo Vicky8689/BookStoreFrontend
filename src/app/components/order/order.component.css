@@ -1,0 +1,37 @@
+.main{
+  margin-top: 10px;
+    border:2PX solid rgb(206, 200, 200);
+  padding: 20px;
+
+}
+
+
+.myOrder{
+    display: flex;
+   
+ justify-content: space-between;
+    /* align-items: center; */
+   
+    padding: 20px;
+    border:2PX solid rgb(160, 156, 156);
+    /* border:2PX solid rgb(228, 9, 9); */
+    margin-bottom: 10px;
+}
+.left{
+  display: flex;
+  justify-content: space-around;
+    /* border:2PX solid rgb(228, 9, 9); */
+  
+
+}
+.bookImage{
+  /* border:2PX solid rgb(46, 197, 16); */
+ padding: 20px;
+  height: 150px;
+}
+@media only screen and (max-width: 600px) {
+  .right{
+    display: none;
+  }
+  
+}

@@ -35,7 +35,9 @@ import { MycartComponent } from './components/mycart/mycart.component';
 import { AddressdetailComponent } from './components/addressdetail/addressdetail.component';
 import { WhishListComponent } from './components/whish-list/whish-list.component';
 import { OrderSuccesComponent } from './components/order-succes/order-succes.component';
-
+import { OrderComponent } from './components/order/order.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ProfileComponent } from './components/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,11 +50,14 @@ import { OrderSuccesComponent } from './components/order-succes/order-succes.com
     MycartComponent,
     AddressdetailComponent,
     WhishListComponent,
-    OrderSuccesComponent
+    OrderSuccesComponent,
+    OrderComponent,
+    ProfileComponent
   ],
   imports: [
     MatToolbarModule,
     MatTabsModule,
+    MatSnackBarModule,
  MatMenuModule ,
     MatPaginatorModule,
     MatButtonModule,

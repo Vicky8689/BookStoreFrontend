@@ -5,30 +5,32 @@
             <div>
 
                 <mat-form-field  appearance="outline">
-                    <input type="text" matInput  placeholder="Full Name" formControlName="name">
+                    <input type="text" matInput  placeholder="Full Name" required formControlName="name">
                     <mat-label>Full Name</mat-label>
                      </mat-form-field>
             </div>
             <div>
 
+                <p  *ngIf = "emailm && emailm.invalid && emailm.touched">please enter valid email</p>
                 <mat-form-field  appearance="outline">
-                    <input type="email" matInput  placeholder="  Email or phone" formControlName="email">
-                    <mat-label>Email</mat-label>
-                     </mat-form-field>
-            </div>
-            <div>
-
-                <mat-form-field  appearance="outline">
-                    <input type="password" matInput  placeholder="  Password" formControlName="pass">
-                    <mat-label>Password</mat-label>
-                    <!-- <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['required']">email is required</div> -->
-                    <!-- <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['email']">Email should be valid</div>  -->
+                    <mat-label for="email">Email</mat-label>
+                    <input type="email" id = "email" matInput  placeholder="  Email or phone"  formControlName="email">
+                    <br>
                 </mat-form-field>
             </div>
             <div>
 
                 <mat-form-field  appearance="outline">
-                    <input type="text" matInput  placeholder="Phone Number" formControlName="mobile">
+                    <input type="password" matInput  required placeholder="  Password" formControlName="pass">
+                    <mat-label>Password</mat-label>
+                    
+                </mat-form-field>
+            </div>
+            <div>
+                <p *ngIf = "mobilem && mobilem.invalid && mobilem.touched">please enter valid phone no.</p>
+               
+                <mat-form-field  appearance="outline">
+                    <input id="mobile" type="text" matInput  placeholder="Phone Number" formControlName="mobile">
                     <mat-label>Mobile Number</mat-label>
                     </mat-form-field>
             </div>

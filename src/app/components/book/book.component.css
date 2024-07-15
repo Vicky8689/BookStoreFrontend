@@ -42,6 +42,16 @@ background-color:  #F5F5F5;
     /* height: 56%; */
     width: 99%;
 }
+/* .rating{
+    height: 20px !important;
+    width: 20px !important;
+} */
+
+/* .material-symbols-outlined{
+background-color:  #ee0808 !important;
+height: 10px;
+
+} */
 
 .bookcard{
     border:2PX solid rgb(222, 224, 219);
@@ -85,14 +95,16 @@ background-color:  #F5F5F5;
     color: white;
     background-color: green;
     border: none;
-    width: 60px;
-    font-size: large;
+height: 20px;
+    width: 40px;
+    font-size: small;
     border-radius: 20px;
 }
-.datils button mat-icon{
+
+/* .datils button mat-icon{
     color:white;
    
-}
+} */
 
 @media only screen and (max-width: 600px) {
 

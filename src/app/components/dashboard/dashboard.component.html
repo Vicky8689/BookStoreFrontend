@@ -1,7 +1,7 @@
 <div class="mainreturns">
 
     <mat-toolbar class="mynavbar">
-        <div class="logo"><img src="../../../assets/education.png" alt="">
+        <div class="logo" (click)="routToDhasBoard()"><img  src="../../../assets/education.png" alt="">
             <h1>Book Store</h1>
         </div>
         <div class="search">
@@ -22,12 +22,12 @@
                 <mat-menu #profileMenu="matMenu">
                     <div class="profilestatus" *ngIf="tokenStatus">
                         <h5>Hello vicky</h5>
-                        <p>
+                        <p (click)="showProfile()">
                             <mat-icon>account_circle</mat-icon>
 
                             Profile
                         </p>
-                        <p>
+                        <p (click)="gotoMyOrders()">
                             <mat-icon>shopping_cart</mat-icon> My Orders
                         </p>
                         <p (click)="OnClickGetWhishlist()">

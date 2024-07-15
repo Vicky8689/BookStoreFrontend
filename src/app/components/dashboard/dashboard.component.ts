@@ -20,9 +20,14 @@ ngOnInit(){
   this.atDashboard=true;
 }
 moreVert:any;
-morefun(){
+routToDhasBoard(){
+  this.router.navigate(['/dashboard/books'])
+}
+showProfile(){
+  this.router.navigate(['/dashboard/profile'])
 
 }
+
 
   OnClickCart(){
     if(this.tokenStatus){
@@ -43,5 +48,9 @@ morefun(){
   OnClickGetWhishlist(){
     this.atDashboard=false;
     this.router.navigate(['/dashboard/mywhishlist'])
+  }
+  gotoMyOrders(){
+    
+    this.router.navigate(['/dashboard/allorder'])
   }
 }

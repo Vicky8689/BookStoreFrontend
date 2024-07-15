@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userservices/user.service';
 
@@ -10,26 +11,26 @@ import { UserService } from 'src/app/services/userservices/user.service';
 })
 export class SignupComponent {
   submitted=false;
-  constructor( private _formBuilder: FormBuilder,private userService:UserService,private router:Router ){
+  constructor( private _formBuilder: FormBuilder,private userService:UserService,private router:Router ,private snakebar:MatSnackBar){
 
   }
  signupForm: FormGroup = new FormGroup({
     name: new FormControl(''),
-    email: new FormControl(''),
+    email: new FormControl('',[Validators.required,Validators.email]),
     pass: new FormControl(''),
-    mobile: new FormControl(''),
+    mobile: new FormControl('',[Validators.required,Validators.pattern('^[0-9]{10}$')]),
     
   });
+
+  get emailm(){
+    return this.signupForm.get('email')
+  }
+  get mobilem(){
+    return this.signupForm.get('mobile')
+  }
+
+
   ngOninit(){
-    this.signupForm=this._formBuilder.group(
-      {
-        name: ['',[Validators.required]],
-        email: ['',[Validators.required]],
-        pass: ['',[Validators.required]],
-        mobile: ['',[Validators.required]],         
-      },    
-     
-    );
   }
 
   signupuser(){
@@ -42,7 +43,15 @@ export class SignupComponent {
         (response:any) => {
          
           console.log(response);
-          this.router.navigate([''])
+          if(response.success){
+
+            this.router.navigate([this.router.url])
+          }else{
+            this.snakebar.open('User Already Exist' , 'Close',{
+              duration:3000
+            })
+            this.router.navigate([this.router.url])
+          }
           
  
         },

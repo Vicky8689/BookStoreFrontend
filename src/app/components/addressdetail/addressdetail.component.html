@@ -10,31 +10,60 @@
             <div>
 
                 <div>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" formControlName="fullName" required minlength="4" />
+
+                    <!-- <label for="name">Full Name</label>
+                    <input  type="text" id="name" name="name" formControlName="fullName" required minlength="4" /> -->
+                    <mat-form-field  appearance="outline">
+                        <input type="text" matInput  placeholder="Full Name" required formControlName="fullName">
+                        <mat-label>Full Name</mat-label>
+                         </mat-form-field>
+                
+                
                 </div>
                 <div>
-                    <label for="number">Mobile Number</label>
-                    <input type="text" id="number" name="number" formControlName="mobile" required minlength="10" />
+                    <!-- <label for="number">Mobile Number</label>
+                    <input required type="text" id="number" name="number" formControlName="mobile"  minlength="10" /> -->
+                    <mat-form-field  appearance="outline">
+                        <input id="mobile" type="text" matInput  placeholder="Phone Number" formControlName="mobile">
+                        <mat-label>Mobile Number</mat-label>
+                        </mat-form-field>
+                
+                
                 </div>
             </div>
 <!-- address -->
             <div>
                 <div class="addressinput">
-                    <label for="Add">Address</label>
-                    <input type="text" id="Add" name="Add" formControlName="address" required />
+                    <!-- <label for="Add">Address</label>
+                    <input type="text" id="Add" name="Add" formControlName="address" required /> -->
+                    <mat-form-field  appearance="outline">
+                        <input id="Address" type="text" matInput  placeholder="Address" formControlName="address">
+                        <mat-label>Address</mat-label>
+                        </mat-form-field>
+                
+               
                 </div>
             </div>
 <!-- city -->
 
             <div>
                 <div>
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city" formControlName="city" required />
+                    <!-- <label for="city">City</label>
+                    <input type="text" id="city" name="city" formControlName="city" required /> -->
+                    <mat-form-field  appearance="outline">
+                        <input id="city" type="text" matInput  placeholder="city" formControlName="city">
+                        <mat-label>city</mat-label>
+                        </mat-form-field>
+                
                 </div>
                 <div>
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state" formControlName="state" required />
+                    <!-- <label for="state">State</label>
+                    <input type="text" id="state" name="state" formControlName="state" required /> -->
+                    <mat-form-field  appearance="outline">
+                        <input id="state" type="text" matInput  placeholder="state" formControlName="state">
+                        <mat-label>state</mat-label>
+                        </mat-form-field>
+                
                 </div>
             </div>
 <!-- type -->

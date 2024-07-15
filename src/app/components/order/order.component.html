@@ -1,0 +1,24 @@
+<div class="main">
+    <div class="myOrder" *ngFor="let item of myorders" >
+       <div class="left">
+        <div class="img">
+
+            <img class="bookImage" src="../../../assets/tempImage.png" alt="">
+    
+        </div>
+        <div class="datils">
+            <h4>{{item.bookName}}</h4>
+            <p>by {{item.bookAuthor}}</p>
+            <div class="price">
+                <h4> Rs.{{item.totalDiscountPrice}}</h4>
+                <p><s>Rs.{{item.totalPrice}} </s></p>
+            </div>
+           
+        </div>
+
+       </div>
+       <div class="right">
+        <h4>{{item.orderDate}}</h4>
+       </div>
+    </div>
+</div>

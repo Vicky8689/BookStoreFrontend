@@ -9,6 +9,10 @@
 
     
 }
+.errormsg{
+    margin-top: 0px;
+    color: red;
+}
 .logo{
     display: flex;
     justify-content: center;

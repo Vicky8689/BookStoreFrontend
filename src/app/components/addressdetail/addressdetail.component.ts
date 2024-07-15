@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-addressdetail',
@@ -9,23 +9,32 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AddressdetailComponent {
 
   customerDetailsFrom = new FormGroup({
-    fullName:new FormControl(''),
-    mobile:new FormControl(''),
-    address:new FormControl(''),
-    city:new FormControl(''),
-    state:new FormControl('')
+    fullName:new FormControl('',[Validators.required]),
+    mobile:new FormControl('',[Validators.required]),
+    address:new FormControl('',[Validators.required]),
+    city:new FormControl('',[Validators.required]),
+    state:new FormControl('',[Validators.required])
 
   })
+
+  
   ContinueButtonstatus:boolean=true;
   constructor(){}
 
   @Output() updateCustomreDetailEvent = new EventEmitter<any>();
 
   onClickContinue(){
-    
-    this.updateCustomreDetailEvent.emit(this.customerDetailsFrom.value);
-  this.ContinueButtonstatus=false;
+    if(this.customerDetailsFrom.valid){
+
+      this.updateCustomreDetailEvent.emit(this.customerDetailsFrom.value);
+    this.ContinueButtonstatus=false;
+    }
+  
+
+
+
   }
+
 
 
 

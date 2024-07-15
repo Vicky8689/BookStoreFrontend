@@ -12,6 +12,9 @@
 
 
 }
+p{
+    margin-top: 0px;
+}
 .mat-mdc-form-field{
     display: flex;
     /* margin-left: -33px; */

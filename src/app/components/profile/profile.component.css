@@ -1,0 +1,12 @@
+.data{
+   border: 1PX SOLID rgb(217, 218, 217);
+   max-width: 500px; 
+padding-inline: 5px;
+border-radius: 5px;
+background-color: rgb(240, 240, 240);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -96,8 +96,8 @@ width: 64%;
 
     background-color: green;
     border: none;
-    width: 60PX;
-    font-size: large;
+    width: 41PX;
+    font-size: small;
     border-radius: 20px;
 }
 .datils button mat-icon{

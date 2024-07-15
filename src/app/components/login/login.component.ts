@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/userservices/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  errorMessage='';
   loginform = new FormGroup({
     email:new FormControl(''),
     password:new FormControl('')
@@ -26,8 +27,15 @@ export class LoginComponent {
     this.userservice.login(data).subscribe(
       (response)=>{
         console.log('Login successful',response);
-        localStorage.setItem('token','Bearer '+response.message); 
-      this.route.navigateByUrl('/dashboard');
+        if(response.success){
+          localStorage.setItem('token','Bearer '+response.message); 
+          
+          this.route.navigateByUrl('/dashboard');
+        }
+        else{
+          this.errorMessage ='Invalid email or password. Please try Again ..'
+        }
+
 
       }
     )

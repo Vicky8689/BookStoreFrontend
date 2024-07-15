@@ -55,8 +55,7 @@ border-radius: 5px;
   }
   
 .mynavbar{
-  /* position: fixed; */
-  /* z-index: 2; */
+ 
   /* overflow: visible; */
     display: flex;
     justify-content: space-around;
@@ -76,6 +75,7 @@ background-color: #A03037;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+    padding-bottom: 60px;
     
     /* border:2PX solid rgb(123, 255, 15); */
 
@@ -121,6 +121,7 @@ background-color: white;
 .profilestatus{
   display: flex;
   flex-direction: column;
+  padding: 10px;
 
   
   
@@ -165,8 +166,8 @@ background-color: white;
   background-color: #2E1D1E;
   color: white;
 height: 30px;
-  /* position: fixed; */
-  /* bottom: 0; */
+  position: fixed;
+  bottom: 0;
     /* bottom: 0;
     height: 5%;
     width: 100%;
