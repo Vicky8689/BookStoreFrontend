@@ -20,6 +20,7 @@
     justify-content: center;
     gap: 5px;
     color:white;
+    cursor: pointer;
 }
 .search-input {
     /* border:2PX solid rgb(197, 22, 16); */

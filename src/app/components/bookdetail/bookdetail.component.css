@@ -23,26 +23,29 @@ width: 56%;
     /* border:2PX solid rgb(104, 197, 16); */
 background-color:  #F5F5F5;
     /* height: 56%; */
-    width:100%;
+    /* width:100%; */
+    padding: 20px;
+    
+}
+.bookImage{
+    background-size: cover;
+    height: 330px;
+    width: 200px;
+    /* padding-inline: 30px; */
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    object-fit: fill;
 }
 
 .bookcard{
     border:2PX solid rgb(222, 224, 219);
     /* border:2PX solid rgb(236, 100, 8); */
-width: 60%;
+width: fit-content;
     /* width: 300px; */
   margin: 10px;
   
 }
 
-.bookImage{
-    background-size: cover;
-    height: 330px;
-    width: 200px;
-    padding-inline: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 .bottom{
     /* border:2PX solid rgb(104, 197, 16); */
 width: 64%;
@@ -130,14 +133,48 @@ width: 64%;
    overflow: visible;
     text-align: center;
   }
-  .feedinput {
+  .feedback{
     /* border:2PX solid rgb(104, 197, 16); */
+padding-bottom: 40px;
+  }
+  .feedinput {
+    /* border:2PX/ solid rgb(104, 197, 16); */
 
     /* height: 10px; */
+    /* padding-bottom: 20px; */
   }
   .feedinput textarea{
     height: 70px;
     width:80% ;
+  }
+  .feedbackdata{
+    display: flex;
+    flex-direction: column;
+    border:1PX solid rgb(214, 214, 214);
+    padding-bottom: 40px;
+    margin-top: 5px;
+    padding: 5px;
+    /* border:2PX solid rgb(104, 197, 16); */
+
+
+
+  }
+  .feedbackdata  mat-icon{
+    border:1PX solid rgb(141, 141, 141);
+    border-radius: 50%;
+  }
+  .feedbackdata p mat-icon{
+    color: yellow;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+
+  }
+  .usermat h3{
+    display: flex;
+ 
+    justify-content: baseline;
+    gap: 10px;
   }
   
 @media only screen and (max-width: 600px) {

@@ -26,6 +26,13 @@ routToDhasBoard(){
 showProfile(){
   this.router.navigate(['/dashboard/profile'])
 
+
+}
+persionope=false;
+showPersonOperation(){
+this.persionope=true;
+console.log(this.persionope)
+
 }
 
 

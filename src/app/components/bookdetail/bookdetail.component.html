@@ -47,7 +47,7 @@
             </div>
 
                
-            <h5>Rs. {{mydata.price}} Rs.{{mydata.discountPrice}}</h5>
+            <h5>Rs.{{mydata.discountPrice}} <s>Rs. {{mydata.price}}</s> </h5>
          
         </div>
         <hr>
@@ -62,14 +62,33 @@
         <div class="feedback">
             <h4>Custum feedback</h4>
             <div class="feed">
-                <h5>allrating</h5>
-                <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+                <h5>All Rating</h5>
+                <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
                 <div class="feedinput">
-                    <textarea  type="text" placeholder="feedback"></textarea>
+                    <textarea  type="text" placeholder="feedback" [(ngModel)]="feed"></textarea>
                 </div>
                 <div>
 
-                    <button type="submit">submit</button>
+                    <button type="submit" (click)="addFeedBack()">submit</button>
+                </div>
+                <div class="feedbackdata" *ngFor="let i of myFeedData">
+                   <div  class="usermat" >
+
+                    <h3>
+                        <mat-icon>
+                            person
+                        </mat-icon>
+                        {{i.username}}
+                    </h3>
+
+                    <p >
+                        <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+              
+                    </p>
+
+                </div>
+                {{i.msg}}
+
                 </div>
             </div>
         </div>

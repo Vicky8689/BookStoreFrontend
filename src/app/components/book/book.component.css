@@ -39,8 +39,11 @@
 .bookimgdiv{
     /* border:2PX solid rgb(104, 197, 16); */
 background-color:  #F5F5F5;
+padding-inline: 40px;
+padding-top: 20px;
+padding-bottom: 10px;
     /* height: 56%; */
-    width: 99%;
+    /* width: 99%; */
 }
 /* .rating{
     height: 20px !important;
@@ -60,16 +63,25 @@ height: 10px;
   margin: 10px;
   
 }
+.bookimgdiv{
+    /* border:2PX solid rgb(182, 16, 197); */
 
+}
 .bookImage{
     background-size: cover;
     height: 155px;
-    width: 150px;
+    width: 130px;
+    
+/*   
     padding-inline: 30px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px; */
+    /* border:2PX solid rgb(182, 16, 197); */
+
+
 }
 .datils{
+    /* border:2PX solid rgb(182, 16, 197); */
 
     display: flex;
     flex-direction: column;

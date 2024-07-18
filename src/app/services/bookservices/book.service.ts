@@ -61,4 +61,15 @@ export class BookService {
     return this.httpService.deleteService('book/deleteWishlist?bookid='+data,true,{headers:this.headers});
   }
 
+  addFeedBack(data:any){
+return this.httpService.postService('book/addFeedBack',data,true,{headers:this.headers})
+
+  }
+  getFeedBack(data: any) {
+
+    
+    return this.http.get<any>('https://localhost:7053/' + 'book/getFeedBack?bookId=' + data);
+
+  }
+
 }

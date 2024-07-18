@@ -59,72 +59,64 @@
                     </mat-icon>
                 </button>
             </div>
+
             <div class="more">
-
-
-
-                
                 <button mat-button [matMenuTriggerFor]="moremenu">
-                    <mat-icon>more_vert</mat-icon>
+                  <mat-icon>more_vert</mat-icon>
                 </button>
+                <mat-menu #moremenu="matMenu">
+                  <button mat-menu-item [matMenuTriggerFor]="profileMenuin">
+                    <mat-icon>person</mat-icon>
+                    Profile
+                  </button>
+                  <button mat-menu-item (click)="OnClickCart()">
+                    <mat-icon>shopping_cart</mat-icon>
+                    Cart
+                  </button>
+                  <mat-menu #profileMenuin="matMenu">
+                    
+                    <div class="profilestatus" *ngIf="tokenStatus">
+                        <h5>Hello vicky</h5>
+                        <p (click)="showProfile()">
+                            <mat-icon>account_circle</mat-icon>
 
-                <div>
-                    <mat-menu #moremenu="matMenu">
-                        <button mat-button [matMenuTriggerFor]="profileMenuin">
-                            <mat-icon>
-                                person
-                            </mat-icon>
-                            <mat-menu #profileMenuin="matMenu">
-                                <div class="profilestatus" *ngIf="tokenStatus">
-                                    <h5>Hello vicky</h5>
-                                    <p>
-                                        <mat-icon>account_circle</mat-icon>
-                        
-                                        Profile
-                                    </p>
-                                    <p>
-                                        <mat-icon>shopping_cart</mat-icon> My Orders
-                                    </p>
-                                    <p (click)="OnClickGetWhishlist()">
-                                        <mat-icon>favorite</mat-icon> My Wishlist
-                                    </p>
-                                    <button (click)="onClickLogOut()">LOGOUT</button>
-                        
-                                </div>
-                                <div class="profilestatus" *ngIf="!tokenStatus">
-                                    <h5>Welcome</h5>
-                                    <p>To acsees account amd manage orders</p>
-                                    <button (click)="onClickLogin()">LOGIN/SIGNUP</button>
-                                    <hr>
-                                    <p>
-                                        <mat-icon>shopping_cart</mat-icon> My Orders
-                                    </p>
-                                    <p><mat-icon>favorite</mat-icon> whishlist</p>
-                        
-                        
-                        
-                                </div>
-                            </mat-menu>
-                        </button>
-                        
-                        <button class="cartbtn" style="background-color: white;">
-                            
-                            <mat-icon (click)="OnClickCart()">
-                                shopping_cart
-                            </mat-icon>
-                        </button>
+                            Profile
+                        </p>
+                        <p (click)="gotoMyOrders()">
+                            <mat-icon>shopping_cart</mat-icon> My Orders
+                        </p>
+                        <p (click)="OnClickGetWhishlist()">
+                            <mat-icon>favorite</mat-icon> My Wishlist
+                        </p>
+                        <button (click)="onClickLogOut()">LOGOUT</button>
 
-                        <div class="navcart">
-
-                        </div>
-                    </mat-menu>
-                </div>
+                    </div>
+                    <div class="profilestatus" *ngIf="!tokenStatus">
+                        <h5>Welcome</h5>
+                        <p>To acsees account amd manage orders</p>
+                        <button (click)="onClickLogin()">LOGIN/SIGNUP</button>
+                        <hr>
+                        <p>
+                            <mat-icon>shopping_cart</mat-icon> My Orders
+                        </p>
+                        <p><mat-icon>favorite</mat-icon> whishlist</p>
 
 
 
-            </div>
+                    </div>
+
+
+                  </mat-menu>
+                </mat-menu>
+              </div>
+              
+
+
+
+
+
         </div>
-
+        
     </mat-toolbar>
     <div class="maindiv">
 
