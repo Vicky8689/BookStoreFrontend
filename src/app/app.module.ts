@@ -38,6 +38,7 @@ import { OrderSuccesComponent } from './components/order-succes/order-succes.com
 import { OrderComponent } from './components/order/order.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AdminComponent } from './components/admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     WhishListComponent,
     OrderSuccesComponent,
     OrderComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdminComponent
   ],
   imports: [
     MatToolbarModule,

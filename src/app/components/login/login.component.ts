@@ -29,8 +29,15 @@ export class LoginComponent {
         console.log('Login successful',response);
         if(response.success){
           localStorage.setItem('token','Bearer '+response.message); 
+          if(response.data=="admin"){
+          this.route.navigateByUrl('/admin');
+
+          }
+          else{
+
+            this.route.navigateByUrl('/dashboard');
+          }
           
-          this.route.navigateByUrl('/dashboard');
         }
         else{
           this.errorMessage ='Invalid email or password. Please try Again ..'

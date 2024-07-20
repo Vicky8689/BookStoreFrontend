@@ -12,12 +12,25 @@ export class BookComponent {
 
 
   allBookData:any[]=[];
+  allBookDataforsearch=this.allBookData;
   allbookCount:any;
-  constructor(private bookservice:BookService,private router:Router,private dataservice:DataService){
-
-  }
+  searchterm:string="";
+  constructor(private bookservice:BookService,private router:Router,private dataservice:DataService){ }
   ngOnInit(){
     this.getBookBC()
+    this.dataservice.currentsearchTerm.subscribe(
+      value=>{
+        this.searchterm=value;
+        if(this.searchterm.length>0){
+
+          this.allBookDataforsearch=this.allBookData.filter(book=>book.bookName.toLowerCase().includes(this.searchterm.toLowerCase())
+        );
+        }else{
+          
+          this.getBookBC();
+         }
+      }
+    )
   }
   openBookDetail(item:any){
     console.log(item.bookId)
@@ -25,21 +38,26 @@ export class BookComponent {
     this.router.navigate([`/dashboard/booksdetail/${item.bookId}`])
 
   }
-
-
+  onclickSortByPrice(){
+    this.allBookData.sort((a, b) => a.price - b.price);
+  }
 
   getBookBC(){
+    
     this.bookservice.getBook().subscribe(
       (response:any) => {
         console.log('data get ', response.data);
         this.allBookData=response.data;
         this.allbookCount=this.allBookData.length;
+        this.allBookDataforsearch = this.allBookData
        },
        (error:any)=>{
         console.error('Error',error);
        }
       
     );
+
+    
 
   }
 

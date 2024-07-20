@@ -11,6 +11,7 @@ import { WhishListComponent } from './components/whish-list/whish-list.component
 import { OrderSuccesComponent } from './components/order-succes/order-succes.component';
 import { OrderComponent } from './components/order/order.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
 
@@ -46,8 +47,14 @@ const routes: Routes = [
             path:'profile',component:ProfileComponent
           }
 
+
         ]
    }
+   
+   ,
+    {
+      path:'admin',component:AdminComponent
+    }
 
 
 

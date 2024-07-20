@@ -7,6 +7,11 @@ import { BehaviorSubject } from 'rxjs';
 export class DataService {
 
   constructor() { }
-  
+  private dataSubject = new BehaviorSubject<string>("");
+  currentsearchTerm=this.dataSubject.asObservable();
+  setdata(data:any){
+this.dataSubject.next(data);
+  }
+
   
 }

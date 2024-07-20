@@ -6,7 +6,7 @@
         </div>
         <div class="search">
             <mat-icon matPrefix>search</mat-icon>
-            <input class="searchinput" matInput placeholder="Type to search...">
+            <input class="searchinput" matInput placeholder="Type to search..." [(ngModel)] = searchTerm (keyup)= updateSerarchData()>
 
         </div>
 

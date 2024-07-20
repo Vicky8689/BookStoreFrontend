@@ -80,6 +80,7 @@ console.log('hello vicky')
       res=>{
         console.log('res',res.data);
         this.myFeedData=res.data;
+        this.myFeedData.reverse()
       }
     )
   }
@@ -90,7 +91,7 @@ let data ={bookId:this.bookIdparms,feedback:this.feed}
 this.bookservice.addFeedBack(data).subscribe(
   feedback=>{
 console.log('feedres',feedback)
-this.router.navigate([this.router.url])
+this.ngOnInit(); 
   }
 )
 

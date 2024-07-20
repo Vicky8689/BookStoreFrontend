@@ -1,64 +1,68 @@
 <div class="mainreturnAgain">
 
-    <div class="topmain" >
+    
+    <div class="topmain">
         <div class="top">
 
             <h4>Books</h4>
             <h5>({{allbookCount}} Items)</h5>
+           
         </div>
         <span class="spacer"></span>
         <div class="topright">
 
-            
-        <button mat-button [matMenuTriggerFor]="menu">
-            <div style=" display: flex;align-items: center;">
-                <p>Short by relevance
-                </p>
-                <mat-icon>arrow_drop_down</mat-icon>
-            </div>
-        </button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-            <button mat-menu-item>Item 3</button>
-        </mat-menu>
+
+            <button mat-button [matMenuTriggerFor]="menu">
+                <div style=" display: flex;align-items: center;">
+                    <p>Short by relevance
+                    </p>
+                    <mat-icon>arrow_drop_down</mat-icon>
+                </div>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="onclickSortByPrice()">Sort By Price</button>
+                
+            </mat-menu>
+        </div>
+
     </div>
 
+    <div class="mainreturns">
+
+
+        <div class="main" *ngFor="let item of allBookDataforsearch">
+
+            <mat-card class="bookcard" (click)="openBookDetail(item)">
+                <div>
+                    <div class="bookimgdiv">
+                        <img class="bookImage" src="../../../assets/tempImage.png" alt="">
+                    </div>
+
+                    <div class="datils">
+                        <h4>{{item.bookName}}</h4>
+
+
+                        <p>by {{item.author}}</p>
+
+                        <div style="display: flex;">
+
+                            <button>4.5
+                                <i class="fa-regular fa-star" style="color: #ffffff;"></i>
+                            </button>
+                            <h5>(20)</h5>
+                        </div>
+<div style="display: flex; align-items: center; gap: 5px;">
+
+    <h4>Rs.{{item.discountPrice}} </h4>
+   <p style="font-size: small;"> <s>Rs. {{item.price}} </s></p>
 </div>
+                    </div>
 
-<div class="mainreturns" >
-    
-    
-    <div class="main" *ngFor="let item of allBookData">
-        
-        <mat-card class="bookcard" (click)="openBookDetail(item)" >
-            <div>
-            <div class="bookimgdiv">
-                <img  class="bookImage" src="../../../assets/tempImage.png" alt="">
-            </div>
-            
-           <div class="datils">
-                <h4>{{item.bookName}}</h4>
-           
-               
-                <p>by {{item.author}}</p>
-          
-            <div style="display: flex;">
+                </div>
+            </mat-card>
 
-                <button >4.5
-                    <i class="fa-regular fa-star" style="color: #ffffff;"></i>
-                </button>
-                <h5>(20)</h5>
-            </div>
-                    
-                <h5>Rs. {{item.price}} Rs.{{item.discountPrice}}</h5>
-            </div>
 
         </div>
-    </mat-card>
 
-
-</div>
-
-</div>
     </div>
+</div>
