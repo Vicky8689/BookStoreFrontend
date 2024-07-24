@@ -16,7 +16,7 @@ export class BookdetailComponent {
   quantity = 0;
   mydata: any={} ;
   bookIdparms:any;
-  feed='';
+  feed='Nice Book';
   myFeedData:any;
   constructor(private router: Router, private dataservice: DataService, private bookservice: BookService,private activerout:ActivatedRoute) {  }
 
