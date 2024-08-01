@@ -39,6 +39,7 @@ import { OrderComponent } from './components/order/order.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { GoogleLoginProvider, GoogleSigninButtonDirective, GoogleSigninButtonModule, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,12 +55,15 @@ import { AdminComponent } from './components/admin/admin.component';
     OrderSuccesComponent,
     OrderComponent,
     ProfileComponent,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
+    GoogleSigninButtonModule,
     MatToolbarModule,
+  
     MatTabsModule,
     MatSnackBarModule,
+    SocialLoginModule,
  MatMenuModule ,
     MatPaginatorModule,
     MatButtonModule,
@@ -75,7 +79,29 @@ import { AdminComponent } from './components/admin/admin.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        lang: 'en',
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '413879773762-n7af13kl6gughaculnoqsnsc72oe0bni.apps.googleusercontent.com'
+            )
+          }
+         
+        ],
+        onError: (err) => {
+          console.error(err);
+        }
+      } as SocialAuthServiceConfig,
+    }
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

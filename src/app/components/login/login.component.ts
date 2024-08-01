@@ -1,3 +1,4 @@
+import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -15,9 +16,21 @@ export class LoginComponent {
     password:new FormControl('')
 
   })
-  constructor(private userservice:UserService,private route:Router){
+  constructor(private userservice:UserService,private route:Router,private authService: SocialAuthService){
 
   }
+  ngOnInit(){
+    this.authService.authState.subscribe(
+      (res)=>{
+        console.log(res);
+        if(res.idToken){
+          this.route.navigateByUrl('/dashboard');
+          
+        }
+      }
+    )
+  }
+  
 
   loginuser(){
     console.log('i am in login component');
